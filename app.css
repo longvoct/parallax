@@ -1,0 +1,271 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  outline: none;
+  border: none;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-image: url("./images/Background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image1 {
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 1200px;
+  z-index: 6;
+  opacity: 0;
+  transform: scale(0.4) translateY(100%);
+}
+.image1.active {
+  animation: imageAnimate1 1s ease-in-out forwards 1s;
+}
+
+.image2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 200px;
+  z-index: 5;
+  opacity: 0;
+  transform: scale(0.4) translateX(100%);
+}
+
+.image2.active {
+  animation: imageAnimate2 1s ease-in-out forwards 1s;
+}
+
+.image3 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 4;
+  transform: scale(1.2) translateY(20%);
+  height: 300px;
+}
+
+.image3.active {
+  animation: imageAnimate3 1s ease-in-out forwards 1s;
+}
+
+.image4 {
+  position: absolute;
+  bottom: 160px;
+  left: 0;
+  z-index: 2;
+  transform: scale(1.5);
+}
+
+.image4.active {
+  animation: imageAnimate4 1s ease-in-out forwards 1s;
+}
+
+.image5 {
+  position: absolute;
+  right: 130px;
+  top: 100px;
+  width: 100px;
+  mix-blend-mode: screen;
+  transform: translateY(300%);
+  z-index: 0;
+}
+
+.image5.active,
+.image6.active,
+.image7.active {
+  animation: imageAnimate 2s ease-in-out forwards 1s;
+}
+
+.image6 {
+  position: absolute;
+  width: 400px;
+  mix-blend-mode: screen;
+  top: 30px;
+  transform: translateY(300%);
+  z-index: 0;
+  /* animation: imageAnimate 4s ease-in-out forwards 1s; */
+}
+
+.image7 {
+  position: absolute;
+  width: 120px;
+  right: 350px;
+  top: 250px;
+  transform: translateY(300%);
+  z-index: 0;
+  /* animation: imageAnimate 4s ease-in-out forwards 1s; */
+}
+
+.text {
+  position: absolute;
+  z-index: 10;
+  font-size: 50px;
+  font-weight: bold;
+  text-transform: uppercase;
+  /* text-shadow: 2px 2px 1px #42abf1; */
+  margin-top: -120px;
+  transform: translateY(300%);
+  z-index: 0;
+  /* animation: imageAnimate 3s ease-in-out forwards 1s; */
+  color: #fff;
+}
+
+.text-number {
+  position: absolute;
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  z-index: 10;
+  /* text-shadow: 2px 2px 1px #42abf1; */
+  transform: translateY(300%);
+  z-index: 0;
+  color: #fff;
+}
+
+span.active {
+  animation: imageAnimate 2.5s ease-in-out forwards 1s;
+}
+
+.btn {
+  width: 150px;
+  height: 60px;
+  background-color: #fff;
+  position: absolute;
+  z-index: 100;
+  color: #141418;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: -420px;
+  border-radius: 8px;
+  background: linear-gradient(
+    91.03deg,
+    #ffffff -6.88%,
+    rgba(255, 255, 255, 0.72) 109.82%
+  );
+}
+
+.btn.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease-in-out;
+  transform: translateY(150px);
+  z-index: 0;
+}
+
+.btn:active {
+  opacity: 90%;
+}
+
+.btn-text {
+  background: linear-gradient(180deg, #1ab5db 0%, #6378ce 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+@keyframes imageAnimate1 {
+  0% {
+    opacity: 0;
+    transform: scale(0.4) translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translate(0%);
+  }
+}
+
+@keyframes imageAnimate2 {
+  0% {
+    opacity: 0;
+    transform: scale(0.4) translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translate(0%);
+  }
+}
+
+@keyframes imageAnimate3 {
+  0% {
+  }
+  100% {
+    transform: scale(1) translate(0%);
+    height: 189px;
+  }
+}
+
+@keyframes imageAnimate4 {
+  0% {
+  }
+  100% {
+    transform: scale(1);
+    bottom: 80px;
+  }
+}
+
+@keyframes imageAnimate {
+  0% {
+    transform: translateY(300%);
+    z-index: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    z-index: 0;
+  }
+}
